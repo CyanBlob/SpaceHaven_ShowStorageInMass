@@ -1,4 +1,4 @@
-package com.cyanblob.SpaceHavenMod;
+package com.cyanblob.ShowStorageInMass;
 
 import fi.bugbyte.framework.screen.TextIconTooltip;
 import fi.bugbyte.spacehaven.gui.GUIHelper.PlayerShipListItem;
@@ -16,15 +16,6 @@ public class storageGuiAspect {
 
     int storageUsed = 0;
     int storageCapacity = 0;
-
-    //@Pointcut("execution(fi.bugbyte.spacehaven.gui.GUIHelper$PlayerShipListItem.new(..)) && within(fi.bugbyte.spacehaven.gui..*)")
-    //public void postConstruct() {
-    //}
-
-    //@After("postConstruct()")
-    //public void construct(JoinPoint joinPoint) throws Throwable {
-    //};
-
     @Pointcut("execution(void fi.bugbyte.spacehaven.gui.GUIHelper$PlayerShipListItem.updateMass()) && within(fi.bugbyte..*)")
     public void postUpdateMass() {
     }
